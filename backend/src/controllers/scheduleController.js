@@ -96,7 +96,7 @@ export const generateSchedule = async (req, res) => {
 
     await schedule.save();
 
-    // Setup WebSocket or SSE for progress updates (simplified for now)
+    // Setup WebSocket or SSE for progress updates
     const progressCallback = async (progress) => {
       console.log(`Generation ${progress.generation}/${progress.maxGenerations}: ` +
                   `Fitness ${progress.bestFitness.toFixed(2)}, ` +
